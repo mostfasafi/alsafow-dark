@@ -1803,6 +1803,25 @@ body {
 
 }
 
+.nafetha {
+    position: fixed;
+    left: 30px;
+    bottom: 2px;
+    z-index: 1000;
+    padding: 8px 12px;
+    color: #11e41f;
+    border-radius: 10px;
+    transform: translateY(-50%);
+    transform: rotate(0deg);
+    background-color: rgba(112, 240, 0, 0.201);
+
+}
+
+.nafetha h1 {
+    background-color: transparent;
+
+}
+
 @media (max-width: 750px) {
     .Request {
         flex-wrap: wrap;
