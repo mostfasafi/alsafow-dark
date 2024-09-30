@@ -29,3 +29,6 @@ var x = setInterval(function () {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+var wats = document.getElementsByClassName("wats");
+wats.onclick.open("https://api.whatsapp.com/send/?phone=972595669110");

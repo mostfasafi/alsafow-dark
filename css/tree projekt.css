@@ -402,7 +402,6 @@ body {
     right: 30px;
     bottom: 30px;
     z-index: 1000;
-    background-color: #bc0e0e0e;
     padding: 8px 12px;
     color: var(--main-color);
     border-radius: 10px;
@@ -417,7 +416,6 @@ body {
     right: 30px;
     bottom: 30px;
     z-index: 1000;
-    background-color: #0000000e;
     padding: 8px 12px;
     color: var(--main-color);
     border-radius: 10px;
@@ -426,15 +424,16 @@ body {
 
 }
 
-.dawn i {
+.dawn i:hover {
 
     color: var(--main-color);
     transform: translateY(-50%);
-    transform: rotate(180deg);
+    transform: rotate(360deg);
     bottom: 0;
     transition: var(--main-transition);
     animation: ap-and-dawon 1.5s infinite;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .dawnup i {
@@ -1793,6 +1792,8 @@ body {
     font-size: 20px;
 }
 
+
+
 /* end awesome */
 /* start Request */
 .Request {
@@ -1803,24 +1804,152 @@ body {
 
 }
 
+
+
+
+.dipged {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #000000;
+    padding-bottom: 110px;
+}
+
+.dipged img {
+    padding-bottom: 50px;
+    height: 140px;
+}
+
 .nafetha {
-    position: fixed;
     left: 30px;
     bottom: 2px;
     z-index: 1000;
     padding: 8px 12px;
     color: #11e41f;
+    padding-top: 100px;
     border-radius: 10px;
     transform: translateY(-50%);
     transform: rotate(0deg);
-    background-color: rgba(112, 240, 0, 0.201);
 
 }
+
 
 .nafetha h1 {
     background-color: transparent;
 
 }
+
+.nafetha {
+    position: relative;
+
+    transition: 3s;
+    animation: nafetha 2.3s linear forwards;
+
+
+}
+
+.dipged {
+    transition: 3s;
+
+    animation: dipged 7.3s linear forwards;
+
+}
+
+
+
+@keyframes nafetha {
+    0% {
+        top: 1145px;
+
+    }
+
+    90% {
+        top: -90px;
+
+    }
+
+
+
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes dipged {
+    0% {
+        display: flex;
+
+    }
+
+
+
+
+
+    100% {
+        display: none;
+    }
+}
+
+
+
+
+
+
+.non {
+
+
+    animation: non 7.3s linear forwards;
+
+}
+
+
+
+@keyframes non {
+    0% {
+        display: none;
+
+
+    }
+
+    90% {
+        display: none;
+
+
+    }
+
+
+    100% {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 750px) {
     .Request {
@@ -2121,3 +2250,52 @@ hr {
 
 
 /* end footer */
+
+
+
+
+
+
+
+
+/* HTML: <div class="loader"></div> */
+
+
+
+
+
+
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    margin-top: 50px;
+    --r1: 154%;
+    --r2: 68.5%;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+        radial-gradient(var(--r1) var(--r2) at top, rgb(42, 41, 41) 79.5%, var(--main-color) 80%),
+        radial-gradient(var(--r1) var(--r2) at bottom, var(--main-color) 79.5%, rgb(42, 41, 41) 79.5% 80%),
+        radial-gradient(var(--r1) var(--r2) at top, rgb(42, 41, 41) 79.5% 79.5%, var(--main-color) 80%),
+        #ccc;
+    background-size: 50.5% 220%;
+    background-position: -100% 0%, 0% 0%, 100% 0%;
+    background-repeat: no-repeat;
+    animation: l9 2s infinite linear;
+}
+
+@keyframes l9 {
+    33% {
+        background-position: 0% 33%, 100% 33%, 200% 33%
+    }
+
+    66% {
+        background-position: -100% 66%, 0% 66%, 100% 66%
+    }
+
+    100% {
+        background-position: 0% 100%, 100% 100%, 200% 100%
+    }
+}
